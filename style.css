@@ -392,7 +392,7 @@ h3 {
 
 .slider-wrapper {
   position: relative;
-  max-width: 100rem;
+  max-width: 48rem;
   margin: 0 auto;
 }
 .slider {
@@ -409,7 +409,7 @@ h3 {
 .slider img {
   flex: 1 0 100%;
   scroll-snap-align: start;
-  object-fit: cover;
+  object-fit: fill;
 }
 
 .slider-nav {
