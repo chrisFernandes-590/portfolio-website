@@ -13,10 +13,10 @@
     <title>Chris Fernandes</title>
   </head>
   <body>
+    <!-- Standard html from here  -->
     <header>
-      <a href="#" class="logo-holder">
+      <a href="index.html" class="logo-holder">
         <div class="logo">CF</div>
-        <div class="logo-text">Portfolio Website</div>
       </a>
       <nav>
         <ul id="menu">
@@ -24,13 +24,13 @@
             <a href="#" class="viewing">Home</a>
           </li>
           <li>
-            <a href="#">Skills</a>
+            <a href="#skills">Skills</a>
           </li>
           <li>
             <a href="projects.html">Projects</a>
           </li>
           <li>
-            <a href="#" class="button blue">Contact Me</a>
+            <a href="contact.html" class="button blue">Contact Me</a>
           </li>
         </ul>
         <a href="#" class="mobile-toggle" onclick="toggleMobileMenu()"
@@ -51,16 +51,17 @@
         </a>
       </nav>
     </header>
+    <!-- till here  -->
     <main>
       <section class="hero container">
         <div class="hero-blue">
           <div>
             <h1><small>Hi I'm</small> Chris Fernandes</h1>
             <p>
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Alias,
-              aspernatur. Reprehenderit autem eos vero nostrum accusantium quia
-              laboriosam, error magnam numquam voluptatum voluptatem itaque
-              optio, dicta repellendus, alias molestias? Possimus.
+              I Build Clean & Responsive Websites with HTML, CSS, JavaScript,
+              Tailwind & Bootstrap Bringing ideas to life through sleek,
+              user-friendly interfaces. I focus on crafting modern, mobile-first
+              designs that blend aesthetics with performance.
             </p>
             <div class="call-to-action">
               <a href="#" class="button black">View Resume</a>
@@ -97,21 +98,33 @@
             <img src="images/javascript.png" alt="javascript" />
             <img src="images/python.png" alt="python" />
             <img src="images/react.png" alt="react" />
-            <img src="images/azure.png" alt="vscode" />
             <img src="images/nextjs.png" alt="vscode" />
-            <img src="images/sass.png" alt="vscode" />
+            <img
+              src="images/figma-img Background Removed.png"
+              class="scrolling-images"
+              alt="vscode" />
+            <img
+              src="images/flutter_img.svg"
+              class="scrolling-images"
+              alt="flutter" />
+            <img
+              src="images/vscode.png"
+              class="scrolling-images"
+              alt="flutter" />
+            <img
+              src="images/node-js-img.png"
+              class="scrolling-images"
+              alt="flutter" />
             <img src="images/html.png" alt="html" />
             <img src="images/css.png" alt="css" />
             <img src="images/javascript.png" alt="javascript" />
             <img src="images/python.png" alt="python" />
             <img src="images/react.png" alt="react" />
-            <img src="images/azure.png" alt="vscode" />
             <img src="images/nextjs.png" alt="vscode" />
-            <img src="images/sass.png" alt="vscode" />
           </div>
         </div>
       </section>
-      <section class="skills container">
+      <section id="skills" class="skills container">
         <h2>
           <small>About Me</small>
           Skills
@@ -124,32 +137,34 @@
               <li>CSS</li>
               <li>Javascript</li>
               <li>React</li>
-              <li>Angular</li>
-              <li>Vue</li>
             </ul>
             <h3>Backend</h3>
             <ul>
               <li>Node.js</li>
               <li>Express</li>
               <li>Python</li>
-              <li>Java</li>
-              <li>PHP</li>
-              <li>Ruby</li>
+            </ul>
+            <h3>App development</h3>
+            <ul>
+              <li>Flutter</li>
+              <li>React Native</li>
             </ul>
           </div>
           <div class="right-column">
             <h3>A bit about me</h3>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam
-              autem maxime a sint enim alias sed aspernatur beatae aliquam
-              maiores in at incidunt, omnis quibusdam, nobis, nemo repudiandae
-              temporibus pariatur?
+              I'm a passionate web developer with a love for building modern,
+              responsive websites using HTML, CSS, JavaScript, Tailwind CSS, and
+              Bootstrap. Whether it's designing clean user interfaces or diving
+              into code to make things work seamlessly, I enjoy every part of
+              the development process.
             </p>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti
-              adipisci dolor culpa voluptatibus voluptas, saepe incidunt ex ipsa
-              velit? Id alias magnam expedita vitae consectetur illo blanditiis,
-              dolorem amet reiciendis!
+              I'm always curious, constantly learning, and continuously pushing
+              myself to improve my skills and stay up-to-date with the latest
+              trends in web development. When I’m not coding, you’ll probably
+              find me exploring new tech tools, watching dev tutorials, or
+              planning my next creative project.
             </p>
           </div>
         </div>
@@ -159,27 +174,41 @@
           <small>Previous</small>
           Completed Projects
         </h2>
-        <div class="bento-grid">
-          <div class="bento-item">
-            <img src="images/py-project-1.png" alt="" />
+        <div class="slider-wrapper">
+          <div class="slider">
+            <img id="slide-1" src="images/py-project-1.png" alt="Image 1" />
+            <img id="slide-2" src="images/py-project-2.png" alt="Image 1" />
+            <img id="slide-3" src="images/bento-4.jpg" alt="Image 1" />
           </div>
-          <div class="bento-item">
-            <img src="images/bento-6.jpg" alt="" />
-          </div>
-          <div class="bento-item">
-            <img src="images/bento-3.jpg" alt="" />
-          </div>
-          <div class="bento-item">
-            <img src="images/bento-1.jpg" alt="" />
-          </div>
-          <div class="bento-item">
-            <img src="images/bento-4.jpg" alt="" />
-          </div>
-          <div class="bento-item">
-            <img src="" alt="" />
+          <div class="slider-nav">
+            <a href="#slide-1"></a>
+            <a href="#slide-2"></a>
+            <a href="#slide-3"></a>
           </div>
         </div>
       </section>
     </main>
+    <footer>
+      <div class="footer-container">
+        <h2>Chris Fernandes</h2>
+        <p>
+          Computer Engineering Student • Open to opportunities • Let's connect!
+        </p>
+
+        <div class="social-links">
+          <a href="https://github.com/chrisFernandes-590" target="_blank"
+            >GitHub</a
+          >
+          <a href="https://linkedin.com/in/yourusername" target="_blank"
+            >LinkedIn</a
+          >
+          <a href="mailto:chriscric17@gmail.com">Email</a>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2025 Chris Fernandes. All rights reserved.</p>
+      </div>
+    </footer>
   </body>
 </html>
