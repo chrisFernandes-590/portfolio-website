@@ -239,6 +239,10 @@ h3 {
   line-height: 1;
   margin-bottom: 20px;
   color: var(--base-800);
+
+  @media (max-width: 1024px) {
+    margin-bottom: auto;
+  }
 }
 
 /* Till here  */
@@ -274,6 +278,10 @@ h3 {
       box-shadow: 0 8px 16px rgba(62, 166, 255, 0.4);
     }
   }
+
+  @media (max-width: 1024px) {
+    flex-direction: column;
+  }
 }
 
 footer {
@@ -282,7 +290,6 @@ footer {
   text-align: center;
   padding: 40px 20px;
   font-family: "Inter", sans-serif;
-
 
   .footer-container {
     h2 {

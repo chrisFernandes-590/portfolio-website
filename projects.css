@@ -271,7 +271,7 @@ section {
   scroll-snap-type: x mandatory;
   scroll-behavior: smooth;
   box-shadow: 0 1.5rem 3rem -0.75rem hsla(0, 0%, 0%, 0.25);
-  border-radius: 30px;
+  border-radius: 15px;
   scrollbar-width: none;
   background-color: #000;
 }
@@ -317,7 +317,6 @@ footer {
   padding: 40px 20px;
   font-family: "Inter", sans-serif;
   margin-top: 1rem;
-
 
   .footer-container {
     h2 {
