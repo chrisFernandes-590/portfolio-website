@@ -5,6 +5,7 @@ import "@/styles/globals.css";
 import "@/styles/typography.css";
 import "@/styles/animations.css";
 import "@/styles/utilities.css";
+import "@/styles/markdown.css";
 import "./index.css";
 import App from "./App.tsx";
 

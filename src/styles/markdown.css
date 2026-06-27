@@ -1,0 +1,179 @@
+/* ── Markdown Content Styles ───────────────────────────────────── */
+/* Paired with react-markdown + rehype-highlight                   */
+
+.prose-blog h1,
+.prose-blog h2,
+.prose-blog h3,
+.prose-blog h4 {
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.prose-blog h1 {
+  font-size: 2.25rem;
+  margin-top: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.prose-blog h2 {
+  font-size: 1.75rem;
+  margin-top: 2rem;
+  margin-bottom: 0.75rem;
+  color: var(--foreground);
+}
+
+.prose-blog h3 {
+  font-size: 1.375rem;
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.prose-blog p {
+  margin-top: 1rem;
+  line-height: 1.75;
+}
+
+.prose-blog p:first-child {
+  margin-top: 0;
+}
+
+.prose-blog ul,
+.prose-blog ol {
+  margin-top: 0.75rem;
+  margin-bottom: 0.75rem;
+  padding-left: 1.5rem;
+}
+
+.prose-blog ul {
+  list-style-type: disc;
+}
+
+.prose-blog ol {
+  list-style-type: decimal;
+}
+
+.prose-blog li {
+  margin-top: 0.25rem;
+  line-height: 1.75;
+}
+
+.prose-blog strong {
+  font-weight: 600;
+}
+
+.prose-blog code {
+  font-family: "JetBrains Mono", "Fira Code", monospace;
+  font-size: 0.875em;
+}
+
+.prose-blog :not(pre) > code {
+  background: var(--muted);
+  padding: 0.15em 0.4em;
+  border-radius: 0.25rem;
+  font-size: 0.85em;
+}
+
+.prose-blog pre {
+  margin-top: 1.25rem;
+  margin-bottom: 1.25rem;
+  overflow-x: auto;
+  border-radius: 0.5rem;
+  background: oklch(0.15 0 0);
+  padding: 1rem;
+  font-size: 0.875rem;
+  line-height: 1.6;
+}
+
+.dark .prose-blog pre {
+  background: oklch(0.12 0 0);
+}
+
+.prose-blog blockquote {
+  margin-top: 1.25rem;
+  margin-bottom: 1.25rem;
+  border-left: 3px solid var(--primary);
+  padding-left: 1rem;
+  color: var(--muted-foreground);
+  font-style: italic;
+}
+
+.prose-blog a {
+  color: var(--primary);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  transition: opacity 0.2s;
+}
+
+.prose-blog a:hover {
+  opacity: 0.8;
+}
+
+.prose-blog hr {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  border-color: var(--border);
+}
+
+.prose-blog img {
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+  border-radius: 0.5rem;
+}
+
+/* ── Syntax Highlighting (lowlight theme) ────────────────────── */
+/* Matches the dark code block background above                    */
+
+.prose-blog .hljs {
+  color: #e4e4e7;
+}
+
+.prose-blog .hljs-keyword,
+.prose-blog .hljs-selector-tag,
+.prose-blog .hljs-literal,
+.prose-blog .hljs-section,
+.prose-blog .hljs-link {
+  color: #c084fc;
+}
+
+.prose-blog .hljs-string,
+.prose-blog .hljs-title,
+.prose-blog .hljs-name,
+.prose-blog .hljs-type,
+.prose-blog .hljs-attribute,
+.prose-blog .hljs-symbol,
+.prose-blog .hljs-bullet,
+.prose-blog .hljs-addition,
+.prose-blog .hljs-variable,
+.prose-blog .hljs-template-tag,
+.prose-blog .hljs-template-variable {
+  color: #86efac;
+}
+
+.prose-blog .hljs-comment,
+.prose-blog .hljs-quote,
+.prose-blog .hljs-deletion,
+.prose-blog .hljs-meta {
+  color: #a1a1aa;
+}
+
+.prose-blog .hljs-number,
+.prose-blog .hljs-literal {
+  color: #67e8f9;
+}
+
+.prose-blog .hljs-built_in,
+.prose-blog .hljs-builtin-name {
+  color: #fde047;
+}
+
+.prose-blog .hljs-attr {
+  color: #93c5fd;
+}
+
+.prose-blog .hljs-params {
+  color: #e4e4e7;
+}
+
+.prose-blog .hljs-punctuation {
+  color: #d4d4d8;
+}

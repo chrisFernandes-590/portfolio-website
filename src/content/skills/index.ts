@@ -1,0 +1,88 @@
+import type { Skill } from "@/types/Skill";
+
+export const skills: Skill[] = [
+  {
+    category: "Frontend",
+    name: "React",
+    icon: "react",
+    level: 92,
+    displayOrder: 1,
+  },
+  {
+    category: "Frontend",
+    name: "TypeScript",
+    icon: "typescript",
+    level: 88,
+    displayOrder: 2,
+  },
+  {
+    category: "Frontend",
+    name: "Tailwind CSS",
+    icon: "tailwind",
+    level: 85,
+    displayOrder: 3,
+  },
+  {
+    category: "Frontend",
+    name: "Next.js",
+    icon: "nextjs",
+    level: 80,
+    displayOrder: 4,
+  },
+  {
+    category: "Backend",
+    name: "Node.js",
+    icon: "nodejs",
+    level: 85,
+    displayOrder: 5,
+  },
+  {
+    category: "Backend",
+    name: "Python",
+    icon: "python",
+    level: 78,
+    displayOrder: 6,
+  },
+  {
+    category: "Backend",
+    name: "PostgreSQL",
+    icon: "postgresql",
+    level: 75,
+    displayOrder: 7,
+  },
+  {
+    category: "Backend",
+    name: "GraphQL",
+    icon: "graphql",
+    level: 72,
+    displayOrder: 8,
+  },
+  {
+    category: "Tools",
+    name: "Git",
+    icon: "git",
+    level: 90,
+    displayOrder: 9,
+  },
+  {
+    category: "Tools",
+    name: "Docker",
+    icon: "docker",
+    level: 76,
+    displayOrder: 10,
+  },
+  {
+    category: "Tools",
+    name: "VS Code",
+    icon: "vscode",
+    level: 95,
+    displayOrder: 11,
+  },
+  {
+    category: "Tools",
+    name: "Figma",
+    icon: "figma",
+    level: 70,
+    displayOrder: 12,
+  },
+];
