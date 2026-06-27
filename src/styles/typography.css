@@ -1,0 +1,43 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Space Grotesk", sans-serif;
+    font-weight: 700;
+    line-height: 1.1;
+}
+
+body {
+    font-family: "Inter", sans-serif;
+    line-height: 1.6;
+}
+
+.display {
+    font-size: 4rem;
+}
+
+.h1 {
+    font-size: 3rem;
+}
+
+.h2 {
+    font-size: 2.5rem;
+}
+
+.h3 {
+    font-size: 2rem;
+}
+
+.body-lg {
+    font-size: 1.25rem;
+}
+
+.body {
+    font-size: 1rem;
+}
+
+.caption {
+    font-size: .875rem;
+}
