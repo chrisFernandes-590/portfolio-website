@@ -1,4 +1,5 @@
 export interface Site {
+  logo: string;
   title: string;
   description: string;
   email: string;

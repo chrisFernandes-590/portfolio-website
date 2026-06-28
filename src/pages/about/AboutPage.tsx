@@ -1,10 +1,5 @@
 import { useEffect, useState } from "react";
 import { Container } from "@/components/common/container";
-import { Section } from "@/components/common/section";
-import { SectionHeader } from "@/components/common/section-header";
-import { Heading } from "@/components/common/heading";
-import { Text } from "@/components/common/text";
-import { Tag } from "@/components/common/tag";
 import { portfolioService } from "@/services";
 import type { Experience } from "@/types/Experience";
 import type { Education } from "@/types/Education";
@@ -24,126 +19,88 @@ export function AboutPage() {
   const skillCategories = Array.from(new Set(skills.map((s) => s.category)));
 
   return (
-    <>
+    <Container>
       {/* Experience */}
-      <Section id="experience">
-        <Container>
-          <SectionHeader
-            title="Experience"
-            subtitle="Where I've worked"
-            description="My professional journey building software and leading teams."
-          />
+      <section className="py-12 md:py-16">
+        <h2 className="text-2xl font-medium tracking-tight">Experience</h2>
+        <p className="mt-2 text-sm text-foreground">Where I've worked</p>
 
-          <div className="mt-12 space-y-8">
-            {experiences.map((exp) => (
-              <div
-                key={`${exp.company}-${exp.position}`}
-                className="rounded-lg border bg-card p-6"
-              >
-                <div className="flex flex-col gap-1 sm:flex-row sm:items-start sm:justify-between">
-                  <div>
-                    <Heading level="h3">{exp.position}</Heading>
-                    <Text variant="muted" className="mt-1">
-                      {exp.company}
-                    </Text>
-                  </div>
-                  <Text variant="small" className="text-muted-foreground">
-                    {exp.duration}
-                  </Text>
+        <div className="mt-8 space-y-10">
+          {experiences.map((exp) => (
+            <div key={`${exp.company}-${exp.position}`}>
+              <div className="flex flex-col gap-1 sm:flex-row sm:items-baseline sm:justify-between">
+                <div>
+                  <h3 className="text-base font-medium">{exp.position}</h3>
+                  <p className="text-sm text-foreground">{exp.company}</p>
                 </div>
-                <Text variant="body" className="mt-4">
-                  {exp.description}
-                </Text>
-                <div className="mt-4 flex flex-wrap gap-2">
-                  {exp.technologies.map((tech) => (
-                    <Tag key={tech} variant="outline">
-                      {tech}
-                    </Tag>
-                  ))}
-                </div>
+                <p className="text-sm text-foreground">{exp.duration}</p>
               </div>
-            ))}
-          </div>
-        </Container>
-      </Section>
+              <p className="mt-3 max-w-xl text-sm leading-relaxed text-foreground">
+                {exp.description}
+              </p>
+              <div className="mt-3 flex flex-wrap gap-x-3 gap-y-1 text-sm text-foreground">
+                {exp.technologies.map((tech) => (
+                  <span key={tech}>{tech}</span>
+                ))}
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <hr className="border-border" />
 
       {/* Education */}
-      <Section id="education" variant="muted">
-        <Container>
-          <SectionHeader
-            title="Education"
-            subtitle="Academic background"
-            align="center"
-          />
+      <section className="py-12 md:py-16">
+        <h2 className="text-2xl font-medium tracking-tight">Education</h2>
+        <p className="mt-2 text-sm text-foreground">Academic background</p>
 
-          <div className="mt-12 grid gap-6 sm:grid-cols-2">
-            {educations.map((edu) => (
-              <div
-                key={`${edu.institution}-${edu.degree}`}
-                className="rounded-lg border bg-card p-6"
-              >
-                <Heading level="h4">{edu.degree}</Heading>
-                <Text variant="muted" className="mt-1">
-                  {edu.institution}
-                </Text>
-                <div className="mt-3 flex items-center gap-4 text-sm text-muted-foreground">
-                  <span>{edu.duration}</span>
-                  {edu.grade && (
-                    <>
-                      <span>&middot;</span>
-                      <span>{edu.grade}</span>
-                    </>
-                  )}
-                </div>
+        <div className="mt-8 space-y-6">
+          {educations.map((edu) => (
+            <div key={`${edu.institution}-${edu.degree}`}>
+              <h3 className="text-base font-medium">{edu.degree}</h3>
+              <p className="text-sm text-foreground">{edu.institution}</p>
+              <div className="mt-1 flex items-center gap-3 text-sm text-foreground">
+                <span>{edu.duration}</span>
+                {edu.grade && (
+                  <>
+                    <span>&middot;</span>
+                    <span>{edu.grade}</span>
+                  </>
+                )}
               </div>
-            ))}
-          </div>
-        </Container>
-      </Section>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <hr className="border-border" />
 
       {/* Skills */}
-      <Section id="skills">
-        <Container>
-          <SectionHeader
-            title="Skills"
-            subtitle="Technologies I work with"
-            align="center"
-          />
+      <section className="py-12 md:py-16">
+        <h2 className="text-2xl font-medium tracking-tight">Skills</h2>
+        <p className="mt-2 text-sm text-foreground">Technologies I work with</p>
 
-          <div className="mt-12 space-y-10">
-            {skillCategories.map((category) => (
-              <div key={category}>
-                <Heading level="h3" className="mb-4">
-                  {category}
-                </Heading>
-                <div className="flex flex-wrap gap-3">
-                  {skills
-                    .filter((s) => s.category === category)
-                    .sort((a, b) => a.displayOrder - b.displayOrder)
-                    .map((skill) => (
-                      <div
-                        key={skill.name}
-                        className="rounded-lg border bg-card px-4 py-2"
-                      >
-                        <Text variant="body" className="font-medium">
-                          {skill.name}
-                        </Text>
-                        {skill.level > 0 && (
-                          <div className="mt-1 h-1.5 w-24 overflow-hidden rounded-full bg-muted">
-                            <div
-                              className="h-full rounded-full bg-primary transition-all"
-                              style={{ width: `${skill.level}%` }}
-                            />
-                          </div>
-                        )}
-                      </div>
-                    ))}
-                </div>
+        <div className="mt-8 space-y-8">
+          {skillCategories.map((category) => (
+            <div key={category}>
+              <h3 className="text-sm font-medium text-foreground uppercase tracking-wider">
+                {category}
+              </h3>
+              <div className="mt-3 flex flex-wrap gap-x-4 gap-y-1">
+                {skills
+                  .filter((s) => s.category === category)
+                  .sort((a, b) => a.displayOrder - b.displayOrder)
+                  .map((skill) => (
+                    <span key={skill.name} className="text-sm">
+                      {skill.name}
+                    </span>
+                  ))}
               </div>
-            ))}
-          </div>
-        </Container>
-      </Section>
-    </>
+            </div>
+          ))}
+        </div>
+      </section>
+    </Container>
   );
 }
