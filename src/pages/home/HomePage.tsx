@@ -7,7 +7,9 @@ import type { Site } from "@/types/Site";
 import type { SocialLink } from "@/types/SocialLink";
 import Span from "@/components/common/span/Span";
 import DescriptiveIcons from "@/components/icons/DescriptiveIcons";
+import { SiteIcon } from "@/components/icons/SiteIcons";
 import { hobbies } from "@/content/hobbies";
+import { skills } from "@/content/skills";
 
 export function HomePage() {
   const [site, setSite] = useState<Site | null>(null);
@@ -71,6 +73,31 @@ export function HomePage() {
             }}
           />
         ))}
+      </section>
+      <div className="border-t-2 border-dashed border-border my-8"></div>
+      <section>
+        <Span text="tech i know" />
+        <div className="relative overflow-hidden py-8">
+          {/* Left Fade */}
+          <div className="pointer-events-none absolute inset-y-0 left-0 z-10 w-24 bg-linear-to-r from-background to-transparent" />
+
+          {/* Right Fade */}
+          <div className="pointer-events-none absolute inset-y-0 right-0 z-10 w-24 bg-linear-to-l from-background to-transparent" />
+
+          <div className="flex w-max animate-marquee gap-12">
+            {[...skills, ...skills].map((skill, i) => (
+              <div
+                key={`${skill.name}-${i}`}
+                className="flex items-center gap-2"
+              >
+                <SiteIcon {...skill.icon} className="mr-0" />
+                <span className="text-sm font-medium text-foreground/60">
+                  {skill.name}
+                </span>
+              </div>
+            ))}
+          </div>
+        </div>
       </section>
     </Container>
   );

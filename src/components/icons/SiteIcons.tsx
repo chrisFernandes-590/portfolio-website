@@ -8,6 +8,7 @@ export type ColorVariant =
   | "green"
   | "purple"
   | "orange"
+  | "yellow"
   | "zinc";
 
 type SizeVariant = "sm" | "md" | "lg";
@@ -45,6 +46,11 @@ const colorVariants: Record<ColorVariant, string> = {
     from-orange-400
     to-orange-600
     ring-offset-orange-500
+  `,
+  yellow: `
+    from-yellow-300
+    to-yellow-500
+    ring-offset-yellow-400
   `,
   zinc: `
     from-zinc-400

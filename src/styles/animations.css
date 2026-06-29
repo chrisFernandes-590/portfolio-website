@@ -1,23 +1,27 @@
 .fade-in {
-    animation: fadeIn .5s ease forwards;
+  animation: fadeIn 0.5s ease forwards;
 }
 
 @keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 
-    from {
+.animate-marquee {
+  animation: marquee 30s linear infinite;
+}
 
-        opacity: 0;
-
-        transform: translateY(20px);
-
-    }
-
-    to {
-
-        opacity: 1;
-
-        transform: translateY(0);
-
-    }
-
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
 }
