@@ -5,6 +5,9 @@ import { portfolioService } from "@/services";
 import { ROUTES } from "@/constants/routes";
 import type { Site } from "@/types/Site";
 import type { SocialLink } from "@/types/SocialLink";
+import Span from "@/components/common/span/Span";
+import DescriptiveIcons from "@/components/icons/DescriptiveIcons";
+import { hobbies } from "@/content/hobbies";
 
 export function HomePage() {
   const [site, setSite] = useState<Site | null>(null);
@@ -17,7 +20,7 @@ export function HomePage() {
 
   return (
     <Container>
-      <section className="py-16 md:py-24">
+      <section>
         <p className="mt-4 max-w-xl text-base leading-relaxed text-foreground">
           {site?.description ||
             "A personal portfolio showcasing projects and skills."}
@@ -53,6 +56,21 @@ export function HomePage() {
           </Link>
           .
         </p>
+      </section>
+      <div className="border-t-2 border-dashed border-border my-8"></div>
+      <section>
+        <Span text="things that i do" />
+        {hobbies.map((hobby) => (
+          <DescriptiveIcons
+            key={hobby.name}
+            name={hobby.name}
+            description={hobby.description}
+            iconProps={{
+              icon: hobby.icon,
+              color: hobby.iconColor,
+            }}
+          />
+        ))}
       </section>
     </Container>
   );

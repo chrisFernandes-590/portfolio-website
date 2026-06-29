@@ -25,12 +25,12 @@ export function Navbar({ className }: NavbarProps) {
         <div className="flex flex-col gap-4 items-start justify-between">
           <Link
             to={ROUTES.HOME}
-            className="text-xl font-medium tracking-tight transition-opacity hover:opacity-60"
+            className="text-2xl font-medium tracking-tight transition-opacity hover:opacity-60"
           >
             {site?.logo || "Chris Fernandes"}
           </Link>
 
-          <nav className="flex items-center gap-6">
+          <nav className="flex items-center gap-4">
             {NAV_ITEMS.map((item) => {
               const isActive = location.pathname === item.href;
               return (
@@ -38,17 +38,17 @@ export function Navbar({ className }: NavbarProps) {
                   key={item.href}
                   to={item.href}
                   className={cn(
-                    "group relative pb-1 text-sm transition-colors duration-200",
+                    "group relative pb-1 tracking-wide transition-colors duration-200",
                     isActive
                       ? "text-foreground"
-                      : "text-foreground/70 hover:text-foreground",
+                      : "text-foreground/40 hover:text-foreground",
                   )}
                 >
                   {item.label}
 
                   <span
                     className={cn(
-                      "absolute bottom-0 left-0 h-[2px] bg-foreground transition-all duration-300",
+                      "absolute bottom-0 left-0 h-0.5 bg-foreground transition-all duration-300",
                       isActive ? "w-full" : "w-0 group-hover:w-full",
                     )}
                   />

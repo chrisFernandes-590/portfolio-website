@@ -16,8 +16,8 @@ export function Footer({ className }: FooterProps) {
   }, []);
 
   return (
-    <footer className={cn("py-8", className)}>
-      <Container>
+    <footer className={cn("py-8 ", className)}>
+      <Container className="border-t-2 border-dashed border-border pt-8">
         <div className="flex flex-col items-start gap-1 sm:flex-row sm:items-center sm:justify-between">
           <p className="text-sm text-foreground">
             &copy; {new Date().getFullYear()} {site?.title || "Portfolio"}
