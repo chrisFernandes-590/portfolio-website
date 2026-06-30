@@ -10,6 +10,7 @@ import DescriptiveIcons from "@/components/icons/DescriptiveIcons";
 import { SiteIcon } from "@/components/icons/SiteIcons";
 import { hobbies } from "@/content/hobbies";
 import { skills } from "@/content/skills";
+import ProjectCard from "@/components/project/ProjectCard";
 
 export function HomePage() {
   const [site, setSite] = useState<Site | null>(null);
@@ -59,7 +60,7 @@ export function HomePage() {
           .
         </p>
       </section>
-      <div className="border-t-2 border-dashed border-border my-8"></div>
+      <div className="border-t-2 border-dashed border-border my-8" />
       <section>
         <Span text="things that i do" />
         {hobbies.map((hobby) => (
@@ -74,7 +75,7 @@ export function HomePage() {
           />
         ))}
       </section>
-      <div className="border-t-2 border-dashed border-border my-8"></div>
+      <div className="border-t-2 border-dashed border-border my-8" />
       <section>
         <Span text="tech i know" />
         <div className="relative overflow-hidden py-8">
@@ -98,6 +99,25 @@ export function HomePage() {
             ))}
           </div>
         </div>
+      </section>
+
+      {/* PROJECTS */}
+      <div className="border-t-2 border-dashed border-border my-8" />
+      <section>
+        <Span text="projects i've created" />
+        <div className="flex justify-center mt-4 gap-12 overflow-hidden scrollbar-none w-fit">
+          <ProjectCard />
+        </div>
+      </section>
+      {/* EDUCATION */}
+      <div className="border-t-2 border-dashed border-border my-8" />
+      <section>
+        <Span text="Education" />
+      </section>
+      {/* CONTACT */}
+      <div className="border-t-2 border-dashed border-border my-8" />
+      <section>
+        <Span text="contact" />
       </section>
     </Container>
   );

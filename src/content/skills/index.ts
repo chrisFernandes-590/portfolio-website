@@ -10,11 +10,9 @@ import {
 } from "react-icons/fa";
 import { FaCss, FaHtml5 } from "react-icons/fa6";
 import {
-  SiTypescript,
   SiTailwindcss,
   SiNextdotjs,
   SiPostgresql,
-  SiGraphql,
   SiFigma,
   SiOllama,
 } from "react-icons/si";
